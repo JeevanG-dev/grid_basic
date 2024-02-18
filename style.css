@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+    color: white;
+    font-size: 2rem;
+}
+.parent{
+    background: black;
+    padding: 1rem;
+    min-height: 60vh;
+    /* grid */
+    display: grid;
+    gap: 10px;
+    /* grid-template-columns: 30px 1fr 2fr 100px; */
+    /* grid-template-columns: repeat(2, auto); */
+    /* grid-template-rows: 50px 1fr 40px; */
+    grid-template-areas: 
+    "i8 i8 i3"
+    "i8 i8 i6"
+    "i7 i1 i9 "
+    "i2 i4 i5";
+
+
+}
+
+.parent>div{
+    background: orangered;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.items-1 {
+    /* grid-row-start: 2;
+    grid-row-end: 3; */
+
+    /* grid-row: 2/4;
+
+    grid-column: 1/2; */
+
+grid-area: i1;
+}
+
+.items-2{
+    /* grid-row: 1/2;
+    grid-column: 2/4;*/
+    grid-area: i2;
+} 
+
+.items-3{
+    /* grid-row: 3/5;
+    grid-column: 3/4; */
+    grid-area: i3;
+}
+
+.items-4{
+
+    grid-area: i4;
+}
+.items-5{
+
+    grid-area: i5;
+}
+
+.items-6{
+
+    grid-area: i6;
+}
+
+.items-7{
+
+    grid-area: i7;
+}
+
+.items-8{
+
+    grid-area: i8;
+}
+
+.items-9{
+
+    grid-area: i9;
+}
+
+
+
+/* ipad */
+@media (max-width:992px){
+    .parent{
+        grid-template-areas: 
+        "i1 i2"
+    "i3 i3"
+        "i4 i5 "
+        "i6 i6"
+        "i7 i8"
+        "i9 i9";
+    }
+    .cir{
+        display: flex;
+        margin: 20px;
+       
+        height: 20vh;
+    }
+    
+    .circle{
+        color: black;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        border: 5px solid black;
+        width: 150px;
+      background-color: orangered;
+      border-radius: 50%;
+    
+    }
+}
+
+@media (600px > width){
+    .parent{
+        grid-template-areas: 
+        "i1"
+    "i2"
+        "i3 "
+        "i4"
+        "i5"
+        "i6"
+        "i7"
+        "i8"
+        "i9"
+    }
+}
